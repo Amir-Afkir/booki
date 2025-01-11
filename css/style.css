@@ -121,8 +121,254 @@ a {
     margin-bottom: 5px;
 }
 
+/*---------------------------------------------
+------------------Mon travail-----------------
+-----------------------------------------------
+/* Styles pour Desktop uniquement (> 1024px) */
+@media (min-width: 1025px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: -10px;
+        padding: 30px 0px 10px 0px;
+        background-color: white;
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+    }
 
+    .logo img {
+        max-height: 19px;
+        max-width: auto;
+    }
 
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        gap: 60px;
+        margin-bottom: 15px; 
+        margin-top: -25px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+        border-top: 2px solid transparent; 
+        padding-top: 10px;
+        transition: color 0.3s, border-top 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #0065FC;
+        border-top: 2px solid #0065FC; 
+    }
+
+    .icone-localisation {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        font-size: 16px;
+        background-color : #F2F2F2;
+        color: black;
+        overflow: hidden; 
+        border-radius: 15px 0px 0px 15px;
+        height : 49px;
+        width: 50px;
+    }
+
+    .champ-recherche { 
+        border-top: 1px solid #F2F2F2; 
+        border-bottom: 1px solid #F2F2F2; 
+        border-left: 0px solid white; 
+        border-right: 0px solid white; 
+        background-color: white;
+        outline: none;
+        padding: 10px;
+        padding-left: 25px;
+        height : 27px;
+        width: 160px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .bouton-recherche{
+        align-items: center; 
+        justify-content: center;
+        border: 1px solid #0065FC;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 0px 15px 15px 0px;
+        padding: 0px;
+        height : 49px;
+        width: 140px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .icone-recherche {
+        display: none;
+    }
+    
+    .formulaire-recherche {
+        display: flex;
+        width: auto ;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    } 
+
+    .filtre {
+        display: flex;
+        align-items: center; 
+        gap: 15px; 
+        font-weight: 700;
+    }
+    
+    .bouton{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        Border : 2px solid #F2F2F2 ;
+        gap : 10px;
+        border-radius: 25px;
+        padding : 12px 17px 12px 17px ;
+        background-color: white;
+        color: black;
+        font-weight: 700;
+        font-size: 17px;
+        cursor: pointer;
+    }
+    .bouton i { 
+        font-size: 22px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #333;  
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+      
+    .info i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px; 
+        color: #0065FC; 
+        border : 2px solid #F2F2F2; 
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+      
+
+      /* Hebergement */
+    .hebergement-liste {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 33px;  
+    margin-top: 33px;  
+    }
+    .hebergement-liste .card {
+    display: flex;
+    flex-direction: column;  
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); 
+    }
+    .hebergement-liste img {
+    width: 100%; 
+    height: 110px;  
+    border-radius: 20px 20px 0 0;  
+    
+    }
+    .hebergement-liste .card-content {
+    padding: 0px 0px 10px 10px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    }
+    .hebergement-liste .card-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    }
+    .hebergement-liste .card-subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    }
+    .hebergement-liste .card-rating {
+    margin-top: 4px;
+    }
+
+    /* Activité */
+    .activite {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);  
+        gap: 33px;  
+        margin-top: 33px;  
+    }
+    .activite .card {
+        padding: 0;
+        display: flex;
+        flex-direction: column;  
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); 
+    }
+    .activite img {
+        width: 100%; 
+        height: 370px;  
+        border-radius: 20px 20px 0 0;
+    }
+    .activite .card-content {
+        padding: 5px 0px 0px 10px;  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box; 
+    }
+    .activite .card-title {
+        margin : 10px 10px 20px 10px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /* footer */
+    .footer {
+        margin-top : 60px ; 
+        background-color: #F2F2F2;
+        padding: 0;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .footer .title {
+        padding : 20px 0 7px 20px;
+        margin: 0;
+        font-size: 18px;
+    }
+    .footer .txt {
+        padding : 0 20px 7px 20px;
+        margin: 0;
+        font-size: 16px;
+        line-height: 2; 
+    
+    }
+
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -162,74 +408,62 @@ a {
 }
 
 /* Small devices (phones, less than 768px) */
+/* Media query pour mobile uniquement */
 @media (max-width: 767.98px) {
-    /* ... */
-}
+    /* Logo */
+    .logo {
+        display: flex; /* Active Flexbox */
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement (si nécessaire) */
+        width: 100%; /* Assure que le conteneur occupe toute la largeur */
+    }
 
-/*---------------------------------------------
-------------------Haut de page-----------------
------------------------------------------------
-*/
-/* Style général pour le header */
-/* Général */
-/* Assurez-vous que le header occupe toute la largeur */
-header {
-    display: flex;
-    /* Positionne le logo et le menu en ligne */
-    justify-content: space-between;
-    /* Aligne le logo à gauche et le menu à droite */
-    align-items: center;
-    /* Centre verticalement */
-    width: 100%;
-    /* S'assure que le header occupe toute la largeur */
-    padding: 20px 40px;
-    /* Espacement interne */
-    background-color: white;
-    /* Couleur de fond */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    /* Ombre douce */
-    position: sticky;
-    /* Fixe le header en haut de la page */
-    top: 0;
-    z-index: 10;
-    /* Place le header au-dessus des autres éléments */
-}
+    .logo img {
+        margin :15px;
+        max-height: 19px;
+    }
 
-/* Logo */
-.logo img {
-    max-height: 19px;
-    /* Maintient les proportions de l'image */
-    max-width: auto;
-    /* Adaptez la hauteur à celle de Figma */
-}
+    /* Navigation */
+    nav ul {
+        display: flex; /* Active Flexbox */
+        width: 100%; /* Prend toute la largeur */
+        list-style: none; /* Retire les puces */
+        margin: 0;
+        padding: 0;
+    }
 
+    nav ul li {
+        flex: 1; /* Chaque élément occupe un espace égal */
+        text-align: center; /* Centre le texte dans chaque colonne */
+    }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    /* Supprime les puces */
-    display: flex;
-    /* Place les éléments en ligne */
-    gap: 20px;
-    /* Espacement entre les liens */
-    margin: 0;
-    padding: 0;
-}
+    nav ul li a {
+        display: block; /* Prend toute la largeur du parent */
+        color: #333; /* Couleur du texte */
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px 0; /* Espacement haut/bas */
 
-nav ul li a {
-    text-decoration: none;
-    /* Supprime le soulignement */
-    color: #333;
-    /* Texte sombre */
-    font-weight: bold;
-    /* Texte en gras */
-    font-size: 19px;
-    /* Taille du texte */
-    transition: color 0.3s;
-    /* Effet au survol */
-}
+        /* Bordure uniquement en bas */
+        border: none; /* Réinitialise toutes les bordures */
+        border-bottom: 2px solid transparent;
+        transition: color 0.3s, border-bottom 0.3s;
+    }
 
-nav ul li a:hover {
-    color: #007BFF;
-    /* Change la couleur au survol */
+    nav ul li a:hover {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC; /* Bordure bleue en bas */
+    }
+
+    /*Barre de recherche*/
+    .search-button {
+        display: none; /* Cache le texte "Rechercher" */
+    }
+    
+    .search-icon {
+        display: inline-block; /* Affiche uniquement l'icône */
+    }
+    
+
 }
